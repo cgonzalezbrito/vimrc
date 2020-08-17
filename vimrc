@@ -13,3 +13,5 @@ call minpac#add('tpope/vim-scriptease', {'type': 'opt'})
 
 command! PackUpdate call minpac#update()
 command! PackClean call minpac#clean()
+
+nnoremap <C-p> :<C-u>FZF<CR>
