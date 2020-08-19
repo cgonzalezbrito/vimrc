@@ -15,3 +15,7 @@ command! PackUpdate call minpac#update()
 command! PackClean call minpac#clean()
 
 nnoremap <C-p> :<C-u>FZF<CR>
+
+set expandtab
+set shiftwidth=2 
+set softtabstop=2
