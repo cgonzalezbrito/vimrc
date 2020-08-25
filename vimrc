@@ -19,3 +19,5 @@ nnoremap <C-p> :<C-u>FZF<CR>
 set expandtab
 set shiftwidth=2 
 set softtabstop=2
+
+colorscheme darkblue 
