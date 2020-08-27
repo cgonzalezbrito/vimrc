@@ -1,7 +1,9 @@
 set nocompatible
 filetype plugin indent on
 
-set number
+" turn hybrid line numbers on
+set number relativenumber
+set nu rnu
 
 packadd minpac
 call minpac#init()
