@@ -1,3 +1,15 @@
 # MY VIM TIPS
 
 ## TIP 1 : File navigate
+
+## TIP 2 : End of line
+
+$
+
+## TIP 3: Select several lines:
+
+shift + V, then 'j' or 'k'
+
+##    > Tip 3.1 : Toggle comment:
+#     > Tip 3.2 : Indent
+#       >
