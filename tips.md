@@ -12,7 +12,7 @@ To move betwen words press 'w' to move forward, and 'b' to move backward.
 
 To move to the end of the word press 'e'.
 
-## TIP 2 : Modes
+## TIP 2 : Insert Mode
 
 Insert mode:  The 'Insert' mode allows you to write text.
               In normal mode, Press 'i' to switch to 'Insert' mode. The cursor will be place before the selected character. 
@@ -22,10 +22,10 @@ Insert mode:  The 'Insert' mode allows you to write text.
 
 Normal mode: Press 'Esc' twice to return to normal mode.
 
-## TIP 2 : End of line
-#
+## TIP 3 : Delete text
 
-$
+In normal mode: Press 'x' to delete a character.
+
 
 ## TIP 3: Select several lines:
 
