@@ -6,7 +6,7 @@ My VIMRC file will be update according to my learning process. There is a tips f
 
 ## Installing MINPAC  
 
-$ mkdir -p $VIMCONFIG/pack/minpac/opt 
+$ mkdir -p $VIMCONFIG/pack/minpac/opt  
 $ cd $VIMCONFIG/pack/minpac/opt  
 $ git clone https://github.com/k-takata/minpac.git  
 
