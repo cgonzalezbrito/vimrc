@@ -12,6 +12,7 @@ $ git clone https://github.com/k-takata/minpac.git
 
 ## Installing fzf
 
+$ mkdir -p $VIMCONFIG/pack/bundle/start  
 $ cd $VIMCONFIG/pack/bundle/start  
 $ git clone https://github.com/junegunn/fzf  
 $ $VIMCONFIG/pack/bundle/start/fzf/install --bin  
