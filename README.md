@@ -1,8 +1,13 @@
 ![VIM](https://www.vim.org/images/vim_small.gif)
 
-# I'm learning VIM
+# I'm learning VIM (neovim)
 
 My VIMRC file will be update according to my learning process. There is a tips file.  
+
+## Set $VIMCONFIG
+
+$ mkdir -p ~/.vim  
+$ export VIMCONFIG=~/.vim/  
 
 ## Installing MINPAC  
 
