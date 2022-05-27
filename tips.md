@@ -31,6 +31,12 @@ Normal mode: Press __'Esc'__ twice to return to normal mode.
 
 shift + V, then 'j' or 'k'
 
-##    > Tip 3.1 : Toggle comment:
-#     > Tip 3.2 : Indent
-#       >
+###   > Tip 3.1 : Toggle comment:
+###   > Tip 3.2 : Indent
+###   >
+
+## TIP 4: Navigate betwen files
+
+###   > Tip 4.1 : FZF
+
+###   > Tip 4.2 : NerdTree
