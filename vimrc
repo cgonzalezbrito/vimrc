@@ -59,5 +59,3 @@ command! PackClean call minpac#clean()
 
 nnoremap <C-p> :<C-u>FZF<CR>
 
-
-
