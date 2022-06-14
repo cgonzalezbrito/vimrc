@@ -6,8 +6,10 @@ My VIMRC file will be update according to my learning process. There is a tips f
 
 ## Set $VIMCONFIG
 
+```sh
 $ mkdir -p ~/.vim  
 $ export VIMCONFIG=~/.vim/  
+```
 
 ## Installing MINPAC  
 
