@@ -34,7 +34,8 @@ Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 call plug#end()
 
 colorscheme gruvbox
-let g:gruvbox_contrast_dark = "hard"
+set background=dark " use dark mode
+" set background=light " uncomment to use light mode
 
 let g:deoplete#enable_at_startup = 1
 
