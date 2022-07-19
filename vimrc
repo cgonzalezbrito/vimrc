@@ -33,7 +33,7 @@ Plug 'zchee/deoplete-jedi'
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'lervag/vimtex'
 Plug 'SirVer/ultisnips'
-Plut 'honza/vim-snippets'
+Plug 'honza/vim-snippets'
 call plug#end()
 
 colorscheme gruvbox
