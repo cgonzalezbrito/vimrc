@@ -31,9 +31,7 @@ Plug 'scrooloose/nerdtree'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'zchee/deoplete-jedi'
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-Plug 'lervag/vimtex'
-Plug 'SirVer/ultisnips'
-Plug 'honza/vim-snippets'
+Plug 'xuhdev/vim-latex-live-preview', { 'for': 'tex' }
 call plug#end()
 
 colorscheme gruvbox
@@ -43,11 +41,6 @@ set background=dark " use dark mode
 let g:deoplete#enable_at_startup = 1
 
 let NERDTreeQuitOnOpen=1
-
-let g:UltiSnipsExpandTrigger="<tab>"
-let g:UltiSnipsJumpForwardTrigger="<c-b>"
-let g:UltiSnipsJumpBackwardTrigger="<c-z>"
-let g:UltiSnipsEditSplit="vertical"
 
 let mapleader=" "
 nmap <Leader>s <Plug>(easymotion-s2)
@@ -63,9 +56,8 @@ call minpac#add('k-takata/minpac', {'type': 'opt'})
 call minpac#add('tpope/vim-unimpaired')
 call minpac#add('tpope/vim-scriptease', {'type': 'opt'})
 
-call deoplete#custom#var('omni', 'input_patterns', {
-      \ 'tex': g:vimtex#re#deoplete
-      \})
+autocmd Filetype tex setl updatetime=1
+let g:livepreview_previewer = 'evince'
 
 command! PackUpdate call minpac#update()
 command! PackClean call minpac#clean()
