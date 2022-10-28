@@ -27,13 +27,15 @@ Plug 'sbdchd/neoformat'
 Plug 'jiangmiao/auto-pairs'
 Plug 'vim-airline/vim-airline'
 Plug 'davidhalter/jedi-vim'
-Plug 'tomlion/vim-solidity'
+"Plug 'tomlion/vim-solidity'
 Plug 'easymotion/vim-easymotion'
 Plug 'scrooloose/nerdtree'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'zchee/deoplete-jedi'
 Plug 'xuhdev/vim-latex-live-preview', { 'for': 'tex' }
+"Plug 'mfussenegger/nvim-dap'
+Plug 'sakhnik/nvim-gdb', { 'do': ':!./install.sh' }
 call plug#end()
 
 colorscheme gruvbox
