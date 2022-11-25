@@ -15,6 +15,7 @@ Plug 'christoomey/vim-tmux-navigator'
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'zchee/deoplete-jedi'
 Plug 'xuhdev/vim-latex-live-preview', { 'for': 'tex' }
+Plug 'lervag/vimtex'
 "Plug 'mfussenegger/nvim-dap'
 Plug 'sakhnik/nvim-gdb', { 'do': ':!./install.sh' }
 Plug 'brgmnn/vim-opencl'
@@ -54,15 +55,18 @@ noremap <c-right> gt
 
 " VIMSCRIPT -------------------------------------------------------------- {{{
 
-" This will enable code folding.
 " Use the marker method of folding.
 augroup filetype_vim
     autocmd!
     autocmd FileType vim setlocal foldmethod=marker
 augroup END
 
-" More Vimscripts code goes here.
+let g:deoplete#enable_at_startup = 1
 
+" This is new style
+call deoplete#custom#var('omni', 'input_patterns', {
+      \ 'tex': g:vimtex#re#deoplete
+      \})
 " }}}
 
 function! s:JbzCppMan()
@@ -114,7 +118,6 @@ colorscheme gruvbox
 set background=dark " use dark mode
 " set background=light " uncomment to use light mode
 
-let g:deoplete#enable_at_startup = 1
 
 let NERDTreeQuitOnOpen=1
 
