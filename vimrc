@@ -18,6 +18,7 @@ Plug 'lervag/vimtex'
 "Plug 'mfussenegger/nvim-dap'
 Plug 'sakhnik/nvim-gdb', { 'do': ':!./install.sh' }
 Plug 'brgmnn/vim-opencl'
+Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
 call plug#end()
 
 " }}}
