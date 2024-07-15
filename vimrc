@@ -15,14 +15,12 @@ Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'zchee/deoplete-jedi'
 Plug 'xuhdev/vim-latex-live-preview', { 'for': 'tex' }
 Plug 'lervag/vimtex'
-Plug 'mfussenegger/nvim-dap'
-Plug 'rcarriga/nvim-dap-ui'
-Plug 'brgmnn/vim-opencl'
+Plug 'nvim-neotest/nvim-nio'
 Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
+Plug 'puremourning/vimspector'
 call plug#end()
 
 " }}}
-
 
 " MAPPINGS --------------------------------------------------------------- {{{
 
@@ -50,8 +48,16 @@ nnoremap <silent> <localleader>ol :FSSplitRight<cr>
 noremap <c-left> gT
 noremap <c-right> gt
 
+" Debug mapping
+nnoremap <silent> <Leader>D <Cmd>call vimspector#Launch()<CR>
+nnoremap <silent> <F5> <Cmd>call vimspector#StepInto()<CR>
+nnoremap <silent> <F6> <Cmd>call vimspector#StepOver()<CR>
+nnoremap <silent> <F8> <Cmd>call vimspector#Continue()<CR>
+nnoremap <silent> <F10> <Cmd>call vimspector#Reset()<CR>
+nnoremap <silent> <F11> <Cmd>call vimspector#StepOut()()<CR>
+nnoremap <silent> <Leader>b <Cmd>call vimspector#ToggleBreakpoint()<CR>
+nnoremap <silent> <Leader>cb <Cmd>call vimspector#ClearBreakpoints()<CR>
 " }}}
-
 
 " VIMSCRIPT -------------------------------------------------------------- {{{
 
@@ -61,12 +67,12 @@ augroup filetype_vim
     autocmd FileType vim setlocal foldmethod=marker
 augroup END
 
-let g:deoplete#enable_at_startup = 1
+"let g:deoplete#enable_at_startup = 1
 
 " This is new style
-call deoplete#custom#var('omni', 'input_patterns', {
-      \ 'tex': g:vimtex#re#deoplete
-      \})
+"call deoplete#custom#var('omni', 'input_patterns', {
+"      \ 'tex': g:vimtex#re#deoplete
+"      \})
 " }}}
 
 function! s:JbzCppMan()
@@ -113,16 +119,26 @@ set laststatus=2
 
 syntax enable
 
+
 colorscheme gruvbox
 set background=dark " use dark mode
 " set background=light " uncomment to use light mode
 
+
 let NERDTreeQuitOnOpen=1
 
-"highlight ExtraWhitespace ctermbg=red guibg=red
-"match ExtraWhitespace /\s\+$/
-"au BufWinEnter * match ExtraWhitespace /\s\+$/
-"au InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
-"au InsertLeave * match ExtraWhitespace /\s\+$/
-"au BufWinLeave * call clearmatches()
+let g:vimspector_install_gadgets = [ 'vscode-cpptools' ]
 
+packadd minpac
+call minpac#init()
+
+call minpac#add('k-takata/minpac', {'type': 'opt'})
+
+call minpac#add('tpope/vim-unimpaired')
+call minpac#add('tpope/vim-scriptease', {'type': 'opt'})
+
+autocmd Filetype tex setl updatetime=1
+let g:livepreview_previewer = 'evince'
+
+command! PackUpdate call minpac#update()
+command! PackClean call minpac#clean()
