@@ -15,13 +15,21 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'zchee/deoplete-clang'
 Plug 'zchee/deoplete-jedi'
 
+" Latext test
+
+Plug 'neovim/nvim-lspconfig'
+Plug 'hrsh7th/cmp-nvim-lsp'
+Plug 'hrsh7th/nvim-cmp'
+Plug 'lervag/vimtex'
+
 call plug#end()
 
 " }}}
 
 " MAPPINGS --------------------------------------------------------------- {{{
 
-let mapleader=" "	" Set leader
+let mapleader = " "	" Set leader
+let maplocalleader = ","
 
 nnoremap <Leader>nt :NERDTreeFind<CR>
 
