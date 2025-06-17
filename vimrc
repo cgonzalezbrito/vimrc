@@ -102,4 +102,15 @@ endif
 " Python code checker
 let g:neomake_python_enabled_makers = ['pylint']
 
+" vintex settings
+let g:vimtex_compiler_latexmk = {
+  \ 'options' : [
+  \   '-shell-escape',
+  \ ],
+\}
+
+let g:vimtex_fold_enabled = 1
+set foldmethod=expr
+set foldexpr=vimtex#fold#level()
+
 " }}}
